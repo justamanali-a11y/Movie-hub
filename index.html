@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Hub</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-950 text-white">
+
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-8 py-5 border-b border-slate-800">
+    <h1 class="text-3xl font-bold text-red-500">🎬 Movie Hub</h1>
+
+    <div class="hidden md:flex gap-8 text-slate-300">
+      <a href="#" class="hover:text-red-500">Home</a>
+      <a href="#" class="hover:text-red-500">Trending</a>
+      <a href="#" class="hover:text-red-500">Popular</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="text-center py-20 px-5">
+    <h2 class="text-5xl md:text-6xl font-extrabold leading-tight">
+      Discover Your
+      <span class="text-red-500">Favourite Movies</span>
+    </h2>
+
+    <p class="text-slate-400 mt-5 max-w-xl mx-auto">
+      Search thousands of movies instantly using the OMDb API.
+      Get posters, ratings, release year and much more.
+    </p>
+
+    <!-- Search -->
+    <form id="movieForm"
+      class="mt-10 max-w-2xl mx-auto flex bg-slate-900 rounded-full p-2 shadow-xl">
+
+      <input
+        id="movieInput"
+        type="text"
+        placeholder="Search movie title..."
+        class="flex-1 bg-transparent px-5 outline-none text-lg placeholder:text-slate-500"/>
+
+      <button
+        class="bg-red-600 hover:bg-red-700 px-7 py-3 rounded-full font-semibold transition">
+        Search
+      </button>
+    </form>
+  </section>
+
+  <!-- Movie Grid -->
+  <section class="px-6 md:px-12 pb-16">
+    <h3 class="text-3xl font-bold mb-8">Search Results</h3>
+
+    <div id="movieHub"
+      class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+      <!-- JS cards here -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-6 text-center text-slate-500">
+    © 2026 Movie Hub • Built with Tailwind CSS & OMDb API
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
